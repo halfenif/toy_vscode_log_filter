@@ -4,7 +4,7 @@
   "description": "log filter for trace",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.91.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Other"
@@ -16,7 +16,7 @@
       {
         "command": "toy-vscode-log-filter.logfilter",
         "title": "Log filter for DEBUG"
-      }      
+      }
     ],
     "menus": {
       "explorer/context": [
@@ -26,7 +26,23 @@
           "group": "logfilter"
         }
       ]
-    }    
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Log Filter Configuration",
+      "properties": {
+        "logfilter.filterCharacter": {
+          "type": "string",
+          "default": "*",
+          "description": "Character to filter lines by."
+        },
+        "logfilter.position": {
+          "type": "number",
+          "default": 20,
+          "description": "Compare start position (start 1)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -37,14 +53,13 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.91.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.91.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0"
   }
 }
