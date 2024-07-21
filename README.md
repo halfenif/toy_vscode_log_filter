@@ -1,5 +1,5 @@
 # toy-vscode-log-filter
-
+![1](doc/Z_20240721_183414.png)
 Log File에서 특정 문자가 시작하는 Line만 Filter하는 VSCode Extension입니다.
 - 주로 WAS Log에서 특정 패턴을 찾기 위해 만들었습니다.
 - 예로 LGCNS MDD의 경우, 각 Operation의 호출은 특정 문자열로 시작하는 경우가 있습니다.
@@ -10,6 +10,9 @@ Log File에서 특정 문자가 시작하는 Line만 Filter하는 VSCode Extensi
 - 설정 항목 찾기(상단의 Search)에 "logfilter"라고 입력하면 2개의 설정 항목이 나타납니다.
 - Filter Character: 필터할 시작문자열을 입력합니다. "★★" 이렇게 입력하면 로그중에 ★★인 행(Line)만 거르게 됩니다.
 - Position: (예를 들어 ★★)문자열의 시작위치를 지정합니다. 문자열이이 JavaScript는 0부터 시작하지만, 우리는 사람임으로 1부터 계산 되도록 했습니다.
+- Log File을 VSCode에 나타나도록 합니다.
+- 왼쪽 트리에서 로그파일을 선택하고, 마우스 오른쪽 버튼을 눌러 "Log filter for DEBUG"를 실행합니다.
+- 새 창에 Filter된 문자열(Line)이 출력됩니다.
 
 ## Release Notes
 

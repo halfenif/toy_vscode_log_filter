@@ -25,11 +25,11 @@ export function activate(context: vscode.ExtensionContext) {
 		for (let i = 0; i < document.lineCount; i++) {
 			const line = document.lineAt(i);
 
-			if (line.text.length < position + 1 + compareByte) {
+			if (line.text.length < position - 1 + compareByte) {
 				continue;
 			}
 
-			let sourceText = line.text.substring(position + 1, position + 1 + compareByte);
+			let sourceText = line.text.substring(position - 1, position - 1 + compareByte);
 
 			// vscode.window.showInformationMessage(`line.text[${position}]:${sourceText}`);
 			
