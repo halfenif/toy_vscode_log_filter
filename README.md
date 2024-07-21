@@ -1,71 +1,24 @@
-# toy-vscode-log-filter README
+# toy-vscode-log-filter
 
-This is the README for your extension "toy-vscode-log-filter". After writing up a brief description, we recommend including the following sections.
+Log File에서 특정 문자가 시작하는 Line만 Filter하는 VSCode Extension입니다.
+- 주로 WAS Log에서 특정 패턴을 찾기 위해 만들었습니다.
+- 예로 LGCNS MDD의 경우, 각 Operation의 호출은 특정 문자열로 시작하는 경우가 있습니다.
+- 그러니, 앞 공통부분(주로 GUID)은 건너뛰고 Operation 호출문자열만 출력하면, 하나의 Service가 내부적으로 호출하는 모든 단계를 찾을 수 있을 것으로 예상합니다. (아직 안해봤습니다.)
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Usage
+- VSCode에서 "Cntl + ,"를 눌러 설정화면을 출력합니다.
+- 설정 항목 찾기(상단의 Search)에 "logfilter"라고 입력하면 2개의 설정 항목이 나타납니다.
+- Filter Character: 필터할 시작문자열을 입력합니다. "★★" 이렇게 입력하면 로그중에 ★★인 행(Line)만 거르게 됩니다.
+- Position: (예를 들어 ★★)문자열의 시작위치를 지정합니다. 문자열이이 JavaScript는 0부터 시작하지만, 우리는 사람임으로 1부터 계산 되도록 했습니다.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+### 0.0.1 (2024.07.21)
+첫 릴리즈. 일요일. 집. 서재. 아직 사무실에 가서 안해봤으니 정상적으로 작동 할런지 안할런지 알 수가 없습니다. 폐쇄망에서 일하다보니 이런 점은 애로사항이네요.
 
 ---
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [Extension GitHub](https://github.com/halfenif/toy_vscode_log_filter)
 
 **Enjoy!**
