@@ -2,7 +2,7 @@
   "name": "toy-vscode-log-filter",
   "displayName": "toy_vscode_log_filter",
   "description": "log filter for operation trace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.91.0"
   },
